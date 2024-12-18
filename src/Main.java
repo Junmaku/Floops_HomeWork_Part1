@@ -105,6 +105,76 @@ public class Main {
         for (int i = 1; i <= 10; i++) {
             System.out.printf("%d*%d=%d\n", 2, i, (2 * i));
         }
-
+        //Task 2.1
+        System.out.println("\nЗадание 1: \n");
+        int summa = 0;
+        int countMounth = 0;
+        while (summa < 2459000) {
+            System.out.printf("Месяц %d, сумма накоплений равна %d рублей\n", countMounth++, summa += 15000);
+        }
+        //Task 2.2
+        System.out.println("\nЗадание 2: \n");
+        boolean flag = true;
+        int countForTask2_2 = 1;
+        while (flag) {
+            flag = 10 > countForTask2_2;
+            System.out.printf(countForTask2_2 == 10 ? "%d\n" : "%d ", countForTask2_2++);
+        }
+        for (countForTask2_2 = 10; countForTask2_2 > 0; countForTask2_2--) {
+            System.out.printf(countForTask2_2 != 1 ? "%d " : "%d\n", countForTask2_2);
+        }
+        //Task 2.3
+        System.out.println("\nЗадание 3: \n");
+        int populationY = 12000000;
+        int popPerYear = populationY + (populationY * 17 / 1000) - (populationY * 8 / 1000);
+        for (int l = 0; l <= 10; l++) {
+            System.out.printf("Год %d, численность населения составляет %d\n", l, populationY + popPerYear * l);
+        }
+        //Task 2.4
+        System.out.println("\nЗадание 4:\n");
+        double deposit = 15000;
+        countMounth = 1;
+        while (deposit < 12000000) {
+            deposit += deposit * 7 / 100;
+            System.out.printf("Месяц %d, сумма накоплений равна %.2f рублей\n", countMounth++, deposit);
+        }
+        //Task 2.5
+        System.out.println("\nЗадание 5:\n");
+        deposit = 15000;
+        countMounth = 1;
+        while (deposit < 12000000) {
+            deposit += deposit * 7 / 100;
+            countMounth++;
+            if (countMounth % 6 == 0) {
+                System.out.printf("Месяц %d, сумма накоплений равна %.2f рублей\n", countMounth, deposit);
+            }
+        }
+        //Task 2.6
+        System.out.println("\nЗадание 6:\n");
+        deposit = 15000;
+        countMounth = 1;
+        for (; countMounth <= 12 * 9; countMounth++) {
+            deposit += deposit * 7 / 100;
+            if (countMounth % 6 == 0) {
+                System.out.printf("Месяц %d, сумма накоплений равна %.2f рублей\n", countMounth, deposit);
+            }
+        }
+        //Task 2.7
+        System.out.println("\nЗадание 7:\n");
+        int firstFriday = (int) (Math.random() * 7);
+        for (; firstFriday <= 31; firstFriday += 7) {
+            System.out.printf("Сегодня пятница, %d число. Необходимо подгоотовить отчет.\n", firstFriday);
+        }
+        //Task 2.8
+        System.out.println("\nЗадание 8:\n");
+        int cometYear = 0;
+        int count = 1;
+        while (cometYear < 2124) {
+            cometYear += 79;
+            if (cometYear > 1824 && count <= 3) {
+                System.out.printf((cometYear < 2024 ? "В этом году пролетела комета: %d\n" : "В этом году пролетит комета: %d\n"), cometYear);
+                count++;
+            }
+        }
     }
 }
