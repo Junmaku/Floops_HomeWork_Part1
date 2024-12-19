@@ -126,9 +126,10 @@ public class Main {
         //Task 2.3
         System.out.println("\nЗадание 3: \n");
         int populationY = 12000000;
-        int popPerYear = populationY + (populationY * 17 / 1000) - (populationY * 8 / 1000);
         for (int l = 0; l <= 10; l++) {
-            System.out.printf("Год %d, численность населения составляет %d\n", l, populationY + popPerYear * l);
+            int popPerYear = (populationY * 17 / 1000) - (populationY * 8 / 1000);
+            populationY += popPerYear;
+            System.out.printf("Год %d, численность населения составляет %d\n", l, populationY);
         }
         //Task 2.4
         System.out.println("\nЗадание 4:\n");
@@ -163,17 +164,17 @@ public class Main {
         System.out.println("\nЗадание 7:\n");
         int firstFriday = (int) (Math.random() * 7);
         for (; firstFriday <= 31; firstFriday += 7) {
-            System.out.printf("Сегодня пятница, %d число. Необходимо подгоотовить отчет.\n", firstFriday);
+            System.out.printf("Сегодня пятница, %d число. Необходимо подготовить отчет.\n", firstFriday);
         }
         //Task 2.8
         System.out.println("\nЗадание 8:\n");
         int cometYear = 0;
-        int count = 1;
-        while (cometYear < 2124) {
+        int yearPointA = 1824;
+        int yearPointB = 2100;
+        while (cometYear <= yearPointB) {
             cometYear += 79;
-            if (cometYear > 1824 && count <= 3) {
+            if (cometYear > yearPointA && cometYear <= yearPointB) {
                 System.out.printf((cometYear < 2024 ? "В этом году пролетела комета: %d\n" : "В этом году пролетит комета: %d\n"), cometYear);
-                count++;
             }
         }
     }
